@@ -24,7 +24,7 @@ combined.py harness.py inference_api.py inference_local.py的所有输入输出�
 
 **输入路径**：codeflowbench_sample.json的路径
 
-**输出路径**：推理的输出文件夹（如output）
+**输出路径**：建好的推理的输出文件夹（如output）
 
 ### 使用inference_api.py
 使用的是openai接口，如需修改，请到src.api里修改
