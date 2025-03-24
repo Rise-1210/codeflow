@@ -12,6 +12,7 @@ OUTPUT_DIR="/mnt/public/code/wangzr/mds/multi-turn_code/result_case_gold/test1"
 # 读取 JSON 文件
 json_data = json.load(open(INPUT_DIR))
 uuid_set=get_uuid(OUTPUT_DIR)
+
 for problem in json_data:
     
     subproblems=problem["subproblems"]
