@@ -1,8 +1,10 @@
 import json
 import subprocess
 import os
+import time
 import re
 from src.utils import get_uuid
+import ast
 
 INPUT_DIR="/mnt/public/code/wangzr/mds/multi-turn_code/output/test3/merged_output.json"
 OUTPUT_DIR="/mnt/public/code/wangzr/mds/multi-turn_code/result_case_gold/test1"
@@ -19,16 +21,19 @@ for problem in json_data:
     uuid=problem["problem-id"]
     if uuid in uuid_set:
         continue
+    turn_num=0
+    overall_turns=problem["overall-turns"]
     for subproblem in subproblems:
         if not subproblem.get("generated"):
             continue
         code=subproblem["generated"]
-        
+        turn_num+=1
         result_list=[]
         if not subproblem.get("test_code"):
             continue
         #输入方式1
-        if bool(re.search('input()', code)) or bool(re.search('sys.stdin.read', code)):
+
+        if turn_num==overall_turns:
             function_name=subproblem["name"]
             input_=subproblem["test_code"][0]["input"]
 
