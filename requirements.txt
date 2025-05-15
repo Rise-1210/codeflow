@@ -1,0 +1,5 @@
+vllm==0.6.2
+torch==2.1.2
+transformers==4.46.3
+transformers-stream-generator==0.0.5
+huggingface_hub
