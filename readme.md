@@ -42,7 +42,7 @@ You can directly use our provided Bash scripts to test the model, with only mino
 * For the single-turn coding test, use `test_single_turn.sh`.
 
 ## 📊 Output Statistics
-The final test results will be saved in the `result` folder, with the filename format `{model_name}_{multi_turn/single_turn}.json`.
+The final test result will be saved in the `result` folder, with the filename format `{model_name}_{multi_turn/single_turn}.json`.
 
 
 
