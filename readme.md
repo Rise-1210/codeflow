@@ -3,6 +3,17 @@
 Benchmark for Complex Code Generation </h1>
 
 
+
+<p align="center">
+  <a href="https://huggingface.co/datasets/WaterWang-001/CodeFlowBench-2505">
+    <img alt="Hugging Face Dataset" src="https://img.shields.io/badge/HuggingFace-CodeFlowBench-blue?logo=huggingface">
+  </a>
+  &nbsp;
+  <a href="https://arxiv.org/abs/2504.21751">  
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2505.12345-b31b1b?logo=arxiv">
+  </a>
+</p>
+
 ## 🔧 Installation
 
 ```
