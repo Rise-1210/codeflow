@@ -10,7 +10,7 @@ Benchmark for Complex Code Generation </h1>
   </a>
   &nbsp;
   <a href="https://arxiv.org/abs/2504.21751">  
-    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2505.12345-b31b1b?logo=arxiv">
+    <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2504.21751-b31b1b?logo=arxiv">
   </a>
 </p>
 
