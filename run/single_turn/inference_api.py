@@ -3,15 +3,22 @@ import sys
 import json
 import argparse
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.api import ChatModelAPI
-from src.utils import (
+from src.utils_api import (
     get_filenames_without_extension,
     extract_code,
     ensure_python_code_block,
     get_input_single,
 )
 
+# Use this file if you are evaluating on Codeflowbench-repo dataset.
+# from src.utils_repo import (
+#     get_filenames_without_extension,
+#     extract_code,
+#     get_input_single,
+#     ensure_python_code_block,
+# )
 
 def main(args):
     os.makedirs(args.output_dir, exist_ok=True)

@@ -13,12 +13,21 @@ from src.utils import (
     ensure_python_code_block_main,
     clean_code_block,
 )
-
-
+# Use this file if you are evaluating on Codeflowbench-repo dataset.
+# from src.utils_repo import (
+#     get_filenames_without_extension,
+#     extract_code,
+#     get_input,
+#     ensure_python_code_block,
+#     ensure_python_code_block_main,
+#     clean_code_block,
+# )
 def main(args):
-    os.makedirs(args.output_dir, exist_ok=True)
+    output_dir = os.path.join(args.output_dir)
+    os.makedirs(output_dir, exist_ok=True)
 
-    data = json.load(open(args.input_file))
+    with open(args.input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
     chat_model = ChatModel(model_path=args.model_path, tensor_parallel_size=args.tensor_parallel_size)
     filename_list = get_filenames_without_extension(args.output_dir)
 

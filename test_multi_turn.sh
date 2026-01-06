@@ -1,7 +1,8 @@
 # StepI Inference
 MODEL_NAME="Llama-3.1-8B-Instruct"
 MODEL_PATH="models/${MODEL_NAME}"
-INPUT_FILE="data/codeflowbench_sample.json"
+INPUT_FILE="data/codeflowbench_comp_test.json"
+# INPUT_FILE="data/codeflowbench_repo.json"
 OUTPUT_DIR="output/${MODEL_NAME}_multi_turn_temp"
 
 python run/multi_turn/inference_local.py \
@@ -12,7 +13,8 @@ python run/multi_turn/inference_local.py \
 ## if you need to use api, you can use the follow command instead.
 
 #MODEL_NAME="deepseek-r1"
-#INPUT_PATH="data/codeflowbench_sample.json"
+# INPUT_FILE="data/codeflowbench_comp_test.json"
+# # INPUT_FILE="data/codeflowbench_repo.json"
 #OUTPUT_DIR="output/${MODEL_NAME}_multi_turn_temp"
 #API_KEY="sk-XXXXX"
 #API_URL="https://xxxxx.com/v1"
@@ -34,7 +36,8 @@ MODEL_NAME="Llama-3.1-8B-Instruct"
 INPUT_PATH="output/inference/${MODEL_NAME}_multi_turn.json"
 OUTPUT_DIR="output/${MODEL_NAME}_multi_turn_temp"
 
-python run/multi_turn/harness.py \
+#Use harness_repo.py for CodeFlowBench-Repo evaluation
+python run/multi_turn/harness_repo.py \
   --input_path "$INPUT_PATH" \
   --output_dir "$OUTPUT_DIR" \
   --model_name "$MODEL_NAME"

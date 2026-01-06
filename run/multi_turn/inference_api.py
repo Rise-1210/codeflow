@@ -5,19 +5,27 @@ import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from src.api import ChatModelAPI
 from src.utils_api import get_filenames_without_extension, extract_code, get_input, ensure_python_code_block, ensure_python_code_block_main
-
+# Use this file if you are evaluating on Codeflowbench-repo dataset.
+# from src.utils_repo import (
+#     get_filenames_without_extension,
+#     extract_code,
+#     get_input,
+#     ensure_python_code_block,
+#     ensure_python_code_block_main,
+#     clean_code_block,
+# )
 def main(args):
-    output_dir = os.path.join(args.output_base, args.model_name)
+    output_dir = os.path.join(args.output_dir)
     os.makedirs(output_dir, exist_ok=True)
 
-    with open(args.input_path, 'r', encoding='utf-8') as f:
+    with open(args.input_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
     chat_model = ChatModelAPI(api_url=args.api_url, api_key=args.api_key, model_name=args.model_name)
 
     filename_list = get_filenames_without_extension(output_dir)
     for problem in data:
-        problem_description = problem["problem-description"]
+        problem_description = ""
         subproblems = problem["subproblems"]
         problem_id = problem["problem-id"]
         overall_turns = problem["overall-turns"]
