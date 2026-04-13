@@ -1,8 +1,5 @@
-<h1 align="center"> CodeFlowBench: A Multi-turn, Iterative
-
+<h1 align="center">[ACL 2026] CodeFlowBench: A Multi-turn, Iterative
 Benchmark for Complex Code Generation </h1>
-
-
 
 <p align="center">
   <a href="https://huggingface.co/datasets/WaterWang-001/CodeFlowBench-2505">
@@ -13,6 +10,9 @@ Benchmark for Complex Code Generation </h1>
     <img alt="arXiv" src="https://img.shields.io/badge/arXiv-2504.21751-b31b1b?logo=arxiv">
   </a>
 </p>
+
+## 📰 News
+* **[2026/04]** 🎉 Our paper has been officially accepted to the **ACL 2026 Main Conference**!
 
 ## 📖 Introduction
 CodeFlowBench is a comprehensive benchmark designed to evaluate Large Language Models (LLMs) on **multi-turn**, **dependency-aware**, and **iterative** code generation tasks. Unlike traditional benchmarks that focus on single-function generation, CodeFlowBench tests a model's ability to maintain context, handle complex dependencies, and evolve code over multiple turns.
